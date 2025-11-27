@@ -1,0 +1,27 @@
+{
+  "default_branch": "main",
+  "branches": [
+    "brijr-patch-1",
+    "claude/improve-readme-01FHGxnES6RyMUyrXhVfLeAH",
+    "claude/refactor-wordpress-url-validation-012TF6wkwCbWSxrY9NSydepn",
+    "claude/review-docker-railway-setup-01PpmJH4rdQo7zmY4rrLuZ4k",
+    "main",
+    "revalidate-from-wordpress"
+  ],
+  "parent": {
+    "brijr-patch-1": "main",
+    "claude/improve-readme-01FHGxnES6RyMUyrXhVfLeAH": "main",
+    "claude/refactor-wordpress-url-validation-012TF6wkwCbWSxrY9NSydepn": "main",
+    "claude/review-docker-railway-setup-01PpmJH4rdQo7zmY4rrLuZ4k": "main",
+    "main": null,
+    "revalidate-from-wordpress": "main"
+  },
+  "order": [
+    "main",
+    "brijr-patch-1",
+    "claude/improve-readme-01FHGxnES6RyMUyrXhVfLeAH",
+    "claude/refactor-wordpress-url-validation-012TF6wkwCbWSxrY9NSydepn",
+    "claude/review-docker-railway-setup-01PpmJH4rdQo7zmY4rrLuZ4k",
+    "revalidate-from-wordpress"
+  ]
+}
