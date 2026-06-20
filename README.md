@@ -324,6 +324,7 @@ Edit `menu.config.ts` for navigation links:
 export const mainMenu = {
   home: "/",
   blog: "/posts",
+  about: "/about"
   // Add more links...
 };
 

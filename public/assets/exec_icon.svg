@@ -1,0 +1,16 @@
+<svg width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="7" y="7" width="56" height="56" fill="#14077D"/>
+<path d="M34 14L38.4903 27.8197H53.0211L41.2654 36.3607L45.7557 50.1803L34 41.6393L22.2443 50.1803L26.7346 36.3607L14.9789 27.8197H29.5097L34 14Z" fill="#F3F3F3"/>
+<rect x="21" width="28" height="7" fill="#14077D"/>
+<rect x="21" y="63" width="28" height="7" fill="#14077D"/>
+<rect y="21" width="7" height="28" fill="#14077D"/>
+<rect x="63" y="21" width="7" height="28" fill="#14077D"/>
+<rect x="7" y="7" width="14" height="7" fill="#14077D"/>
+<rect width="14" height="7" transform="matrix(1 0 0 -1 7 63)" fill="#14077D"/>
+<rect width="14" height="7" transform="matrix(-1 0 0 1 63 7)" fill="#14077D"/>
+<rect x="63" y="63" width="14" height="7" transform="rotate(-180 63 63)" fill="#14077D"/>
+<rect x="7" y="7" width="7" height="14" fill="#14077D"/>
+<rect width="7" height="14" transform="matrix(1 0 0 -1 7 63)" fill="#14077D"/>
+<rect width="7" height="14" transform="matrix(-1 0 0 1 63 7)" fill="#14077D"/>
+<rect x="63" y="63" width="7" height="14" transform="rotate(-180 63 63)" fill="#14077D"/>
+</svg>
