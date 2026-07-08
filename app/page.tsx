@@ -1,5 +1,6 @@
 // Craft Imports
 import { Section, Container, Prose } from "@/components/craft";
+import Image from "next/image";
 
 // Next.js Imports
 import Link from "next/link";
@@ -12,12 +13,104 @@ import { NextJsIcon } from "@/components/icons/nextjs";
 // This page is using the craft.tsx component and design system
 export default function Home() {
   return (
-    <Section>
-      <Container>
-        <ToDelete />
-      </Container>
-    </Section>
+    <main>
+      <div className="bg-[#111111] space-y-24 md:grid grid-cols-2 gap-20 p-8 md:p-24">
+            <Image 
+              src="/assets/logo_main_light.svg" 
+              className="w-full self-center"
+              alt = "logo main light"
+              width = {800}
+              height = {800}
+              />
+            <h1 className="text-white self-center text-center md:text-left text-2xl md:text-6xl">
+                creating games for good
+            </h1>
+        </div>
+        <div>
+            <Image 
+              src="/assets/hero_divider.svg" 
+              className="w-full self-center"
+              alt = "logo main light"
+              width = {800}
+              height = {800}
+              />
+        </div>
+        <section>
+            <div className="flex justify-center gap-5">
+                <div className="block bg-pink-300 my-5 w-32">
+                </div>
+                <h1 className="text-center text-2xl md:text-6xl sm:ml-0 w-max">IT'S A CONSPIRACY!</h1>
+                <div className="block bg-pink-300 my-5 w-32">
+                </div>
+            </div>
+            <div className="mx-10 sm:mx-48 flex">
+                <Link href="/">
+                    <Image 
+                      src="/assets/conspiracy_placeholder.png" 
+                      className="w-full self-center"
+                      alt = "logo main light"
+                      width = {800}
+                      height = {800}
+                      />
+                </Link>
+                
+            </div>
+            <h2 className="text-center mt-8 textgradient">COMING SOON...</h2>
+            <h2 className="text-center text-2xl">Stay tuned for more!</h2>
+        </section>
+    </main>
   );
+}
+
+const HomePage = () => {
+  return (
+    <main>
+      <div className="bg-[#111111] space-y-24 md:grid grid-cols-2 gap-20 p-8 md:p-24">
+            <Image 
+              src="/assets/logo_main_light.svg" 
+              className="w-full self-center"
+              alt = "logo main light"
+              width = {800}
+              height = {800}
+              />
+            <h1 className="text-white self-center text-center md:text-left text-2xl md:text-6xl">
+                creating games for good
+            </h1>
+        </div>
+        <div>
+            <Image 
+              src="/assets/logo_main_light.svg" 
+              className="w-full self-center"
+              alt = "logo main light"
+              width = {800}
+              height = {800}
+              />
+        </div>
+        <section>
+            <div className="flex justify-center gap-5">
+                <div className="block bg-pink-300 my-5 w-32">
+                </div>
+                <h1 className="text-center text-2xl md:text-6xl sm:ml-0 w-max">IT'S A CONSPIRACY!</h1>
+                <div className="block bg-pink-300 my-5 w-32">
+                </div>
+            </div>
+            <div className="mx-10 sm:mx-48 flex">
+                <Link href="/">
+                    <Image 
+                      src="/assets/conspiracy_placeholder.png" 
+                      className="w-full self-center"
+                      alt = "logo main light"
+                      width = {800}
+                      height = {800}
+                      />
+                </Link>
+                
+            </div>
+            <h2 className="text-center mt-8 textgradient">COMING SOON...</h2>
+            <h2 className="text-center text-2xl">Stay tuned for more!</h2>
+        </section>
+    </main>
+  )
 }
 
 // This is just some example TSX

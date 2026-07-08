@@ -71,7 +71,7 @@ export default async function Page({
     if (search) params.set("search", search);
     return `/posts${params.toString() ? `?${params.toString()}` : ""}`;
   };
-
+  console.log(posts)
   return (
     <Section>
       <Container>

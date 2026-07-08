@@ -1,0 +1,22 @@
+<svg width="210" height="98" viewBox="0 0 210 98" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="21" y="7" width="168" height="91" fill="#1F709E"/>
+<rect x="14" y="14" width="7" height="77" fill="#1F709E"/>
+<rect x="7" y="21" width="7" height="63" fill="#1F709E"/>
+<rect y="28" width="7" height="49" fill="#1F709E"/>
+<rect width="7" height="77" transform="matrix(-1 0 0 1 196 14)" fill="#1F709E"/>
+<rect width="7" height="63" transform="matrix(-1 0 0 1 203 21)" fill="#1F709E"/>
+<rect width="7" height="49" transform="matrix(-1 0 0 1 210 28)" fill="#1F709E"/>
+<rect x="21" width="168" height="91" fill="#479FE6"/>
+<rect x="14" y="7" width="7" height="77" fill="#479FE6"/>
+<rect x="7" y="14" width="7" height="63" fill="#479FE6"/>
+<rect y="21" width="7" height="49" fill="#479FE6"/>
+<rect width="7" height="77" transform="matrix(-1 0 0 1 196 7)" fill="#479FE6"/>
+<rect width="7" height="63" transform="matrix(-1 0 0 1 203 14)" fill="#479FE6"/>
+<rect width="7" height="49" transform="matrix(-1 0 0 1 210 21)" fill="#479FE6"/>
+<rect x="7" y="28" width="7" height="35" fill="#86C6FA"/>
+<rect x="14" y="63" width="7" height="7" fill="#86C6FA"/>
+<rect x="189" y="63" width="7" height="7" fill="#86C6FA"/>
+<rect x="21" y="70" width="7" height="7" fill="#86C6FA"/>
+<rect x="182" y="70" width="7" height="7" fill="#86C6FA"/>
+<rect x="28" y="77" width="154" height="7" fill="#86C6FA"/>
+</svg>

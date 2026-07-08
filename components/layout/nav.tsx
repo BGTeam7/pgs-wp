@@ -16,7 +16,7 @@ interface NavProps {
 export function Nav({ className, children, id }: NavProps) {
   return (
     <nav
-      className={cn("sticky z-50 top-0 bg-foreground text-background superstar", "border-b", className)}
+      className={cn("sticky z-50 top-0 bg-foreground text-background superstar", "border-none", className)}
       id={id}
     >
       <div
@@ -49,7 +49,7 @@ export function Nav({ className, children, id }: NavProps) {
               </Button>
             ))}
           </div>
-          <Button asChild className="hidden text-lg sm:flex">
+          <Button asChild className="hidden px-button text-lg sm:flex">
             <Link href="https://www.paypal.com/donate/?hosted_button_id=RUGEY8J38GKU4&fbclid=IwZXh0bgNhZW0CMTEAAR3zgSZcImCLTqA2kp7k-JkWzn2axuD_yuD6vpf0awLrN42leFUIDYroIhM_aem_DlQq1v5p6fbh7QZeFX5VwA">donate</Link>
           </Button>
           <MobileNav />
