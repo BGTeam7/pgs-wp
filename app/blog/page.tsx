@@ -20,6 +20,7 @@ import {
 import { Section, Container, Prose } from "@/components/craft";
 import { PostCard } from "@/components/posts/post-card";
 import { FilterPosts } from "@/components/posts/filter";
+import { FilterNews } from "@/components/posts/news_filter";
 import { SearchInput } from "@/components/posts/search-input";
 
 import type { Metadata } from "next";
@@ -52,7 +53,7 @@ export default async function Page({
 
   // Fetch data based on search parameters using efficient pagination
   const [postsResponse, authors, tags, categories] = await Promise.all([
-    getPostsPaginated(page, postsPerPage, { author, tag, category, search }),
+    getPostsPaginated(page, postsPerPage, { author, tag, category: "news", search }),
     search ? searchAuthors(search) : getAllAuthors(),
     search ? searchTags(search) : getAllTags(),
     search ? searchCategories(search) : getAllCategories(),
@@ -71,7 +72,8 @@ export default async function Page({
     if (search) params.set("search", search);
     return `/posts${params.toString() ? `?${params.toString()}` : ""}`;
   };
-  console.log(posts)
+  console.log(tag)
+  console.log("nlakf")
   return (
     <Section>
       <Container>
@@ -88,13 +90,13 @@ export default async function Page({
           <div className="space-y-4">
             <SearchInput defaultValue={search} />
 
-            <FilterPosts
+            <FilterNews
               authors={authors}
               tags={tags}
-              categories={categories}
+              // categories={categories}
               selectedAuthor={author}
               selectedTag={tag}
-              selectedCategory={category}
+              // selectedCategory={category}
             />
           </div>
 

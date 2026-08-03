@@ -12,15 +12,27 @@ import { truncateHtml } from "@/lib/metadata";
 import { Button } from "../ui/button";
 
 export function Job({ post }: { post: Post }) {
+  const category = post._embedded?.["wp:term"]?.[0]?.[0] ?? null;
+  // const tag = post._embedded?.["wp:term"]?.[0]?.[0] ?? null;
   return (
     <div>
-        <h3 className="superstar text-navy text-2xl">Animation Specialist</h3>
+        <div
+          dangerouslySetInnerHTML={{
+            __html: post.title?.rendered || "Untitled Post",
+          }}
+          className="superstar text-navy text-2xl"
+        ></div>
+        {/* <h3 className="superstar text-navy text-2xl">Animation Specialist</h3> */}
         <div className="flex justify-between align-bottom p-8">
-            <ul className="list-disc">
-                <li>aldksfja</li>
-                <li>aldksfja</li>
-            </ul>
-            <Button className="px-button">Apply</Button>
+            <div className="text-sm">
+              {post.excerpt?.rendered
+                ? truncateHtml(post.excerpt.rendered, 12)
+                : "No excerpt available"}
+            </div>
+            <Link href={`/posts/${post.slug}`}>
+              <Button className="px-button">Apply</Button>
+            </Link>
+            
         </div>
         <hr className="h-1.5 bg-navy"/>
     </div>

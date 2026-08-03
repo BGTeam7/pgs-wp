@@ -2,7 +2,8 @@
 export const mainMenu = {
   home: "/",
   about: "/about",
-  blog: "/blog",
+  blog: "/posts",
+  joinus: "/opportunities",
   
 };
 

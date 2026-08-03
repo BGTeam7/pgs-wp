@@ -1,5 +1,6 @@
 import {
   getPostsPaginated,
+  getPostsByCategoryPaginated,
   getAllAuthors,
   getAllTags,
   getAllCategories,
@@ -20,6 +21,7 @@ import {
 import { Section, Container, Prose } from "@/components/craft";
 import { PostCard } from "@/components/posts/post-card";
 import { FilterPosts } from "@/components/posts/filter";
+import { FilterNews } from "@/components/posts/news_filter";
 import { SearchInput } from "@/components/posts/search-input";
 
 import type { Metadata } from "next";
@@ -38,13 +40,13 @@ export default async function Page({
   searchParams: Promise<{
     author?: string;
     tag?: string;
-    category?: string;
+    // category?: string;
     page?: string;
     search?: string;
   }>;
 }) {
   const params = await searchParams;
-  const { author, tag, category, page: pageParam, search } = params;
+  const { author, tag, page: pageParam, search } = params;
 
   // Handle pagination
   const page = pageParam ? parseInt(pageParam, 10) : 1;
@@ -52,7 +54,7 @@ export default async function Page({
 
   // Fetch data based on search parameters using efficient pagination
   const [postsResponse, authors, tags, categories] = await Promise.all([
-    getPostsPaginated(page, postsPerPage, { author, tag, category, search }),
+    getPostsPaginated(page, postsPerPage, { author, tag, category:"7", search }),
     search ? searchAuthors(search) : getAllAuthors(),
     search ? searchTags(search) : getAllTags(),
     search ? searchCategories(search) : getAllCategories(),
@@ -65,13 +67,14 @@ export default async function Page({
   const createPaginationUrl = (newPage: number) => {
     const params = new URLSearchParams();
     if (newPage > 1) params.set("page", newPage.toString());
-    if (category) params.set("category", category);
+    // params.set("category", "news");
     if (author) params.set("author", author);
     if (tag) params.set("tag", tag);
     if (search) params.set("search", search);
     return `/posts${params.toString() ? `?${params.toString()}` : ""}`;
   };
-
+  // console.log(category)
+  // console.log("nlakf")
   return (
     <Section>
       <Container>
@@ -88,13 +91,13 @@ export default async function Page({
           <div className="space-y-4">
             <SearchInput defaultValue={search} />
 
-            <FilterPosts
+            <FilterNews
               authors={authors}
               tags={tags}
-              categories={categories}
+              // categories={categories}
               selectedAuthor={author}
               selectedTag={tag}
-              selectedCategory={category}
+              // selectedCategory={category}
             />
           </div>
 

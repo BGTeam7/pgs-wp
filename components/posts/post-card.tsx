@@ -24,7 +24,7 @@ export function PostCard({ post }: { post: Post }) {
       )}
     >
       <div className="flex flex-col gap-4">
-        <div className="h-48 w-full overflow-hidden relative rounded-md border flex items-center justify-center bg-muted">
+        {/* <div className="h-48 w-full overflow-hidden relative rounded-md border flex items-center justify-center bg-muted">
           {media?.source_url ? (
             <Image
               className="h-full w-full object-cover"
@@ -38,7 +38,7 @@ export function PostCard({ post }: { post: Post }) {
               No image available
             </div>
           )}
-        </div>
+        </div> */}
         <div
           dangerouslySetInnerHTML={{
             __html: post.title?.rendered || "Untitled Post",

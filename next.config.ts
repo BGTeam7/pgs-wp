@@ -1,21 +1,22 @@
 import type { NextConfig } from "next";
 
-const wordpressHostname = process.env.WORDPRESS_HOSTNAME;
+// const wordpressHostname = process.env.WORDPRESS_HOSTNAME;
+const wordpressHostname = "pixelgamesstudio.org"
 const wordpressUrl = process.env.WORDPRESS_URL;
 
 const nextConfig: NextConfig = {
   output: "standalone",
   images: {
-    remotePatterns: wordpressHostname
-      ? [
+    formats: ["image/avif", "image/webp"],
+    remotePatterns:[
           {
             protocol: "https",
             hostname: wordpressHostname,
-            port: "",
-            pathname: "/**",
+            port: ":3000",
+            pathname: "/wordpress/wp-content/uploads/**",
           },
         ]
-      : [],
+      ,
   },
   async redirects() {
     if (!wordpressUrl) {
