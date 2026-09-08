@@ -1,6 +1,7 @@
 // Craft Imports
 import { Section, Container, Prose } from "@/components/craft";
 import Image from "next/image";
+import { Button } from "@/components/ui/button";
 
 // Next.js Imports
 import Link from "next/link";
@@ -35,15 +36,15 @@ export default function Home() {
               height = {800}
               />
         </div>
-        <section>
+        <section className="p-7">
             <div className="flex justify-center gap-5">
-                <div className="block bg-pink-300 my-5 w-32">
+                <div className="block blockgradient rotate-180 my-5 w-32">
                 </div>
-                <h1 className="text-center text-2xl md:text-6xl sm:ml-0 w-max">IT'S A CONSPIRACY!</h1>
-                <div className="block bg-pink-300 my-5 w-32">
+                <h1 className="text-center text-2xl md:text-6xl sm:ml-0 w-max">COMING SOON...</h1>
+                <div className="block blockgradient my-5 w-32">
                 </div>
             </div>
-            <div className="mx-10 sm:mx-48 flex">
+            <div className="mx-10 sm:mx-48 flex justify-center">
                 <Link href="/">
                     <Image 
                       src="/assets/conspiracy_placeholder.png" 
@@ -55,8 +56,22 @@ export default function Home() {
                 </Link>
                 
             </div>
-            <h2 className="text-center mt-8 textgradient">COMING SOON...</h2>
-            <h2 className="text-center text-2xl">Stay tuned for more!</h2>
+            <p className="text-center">Follow our feathered friend and she embarks on a mission to save her friends and family...from video games!</p>
+            <div className="flex justify-center">
+              <Button className="px-button">
+                <Link href="https://itsaconspiracygame.com/">learn more</Link>
+              </Button>
+            </div>
+        </section>
+        <section>
+          <div className="flex justify-center gap-5">
+                <div className="block blockgradient rotate-180 my-5 w-32">
+                </div>
+                <h1 className="text-center text-2xl md:text-6xl uppercase sm:ml-0 w-max">what's new</h1>
+                {/* show latest blog posts */}
+                <div className="block blockgradient my-5 w-32">
+                </div>
+            </div>
         </section>
     </main>
   );

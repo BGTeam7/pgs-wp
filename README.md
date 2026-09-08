@@ -323,8 +323,8 @@ Edit `menu.config.ts` for navigation links:
 ```typescript
 export const mainMenu = {
   home: "/",
-  blog: "/posts",
-  about: "/about",
+  news: "/posts",
+  team: "/team",
   joinus: "/opportunities"
   // Add more links...
 };
